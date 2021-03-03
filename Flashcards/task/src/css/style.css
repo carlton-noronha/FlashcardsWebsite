@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: url("https://stepik.org/media/attachments/lesson/374893/world.png") no-repeat fixed;
+    /* If the link does not work in future comment the above line and uncomment the below */
+    /* background: url("../images/world.png") no-repeat fixed; */
+    background-size: contain;
+}
+
+h1 {
+    text-align: center;
+    color: #37474F;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cardsHolder {
+    display: flex;
+    width: 40vw;
+    flex-flow: row wrap;
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-content: center;
+}
+
+.cardContainer {
+    width: 10vw;
+    height: 10vw;
+    margin: 2%;
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.7s linear;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.front, .back {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.front{
+    background-color: #fff2df;
+    color: #ee6002;
+    z-index: 2;
+}
+
+.back {
+    background-color: #ee6002;
+    color: #fff;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+p {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5%;
+}
